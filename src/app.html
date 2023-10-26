@@ -10,17 +10,3 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
-
-
-
-<!-- App.svelte -->
-<script>
-	import { Router, Route } from 'svelte-routing';
-	import HomePage from './HomePage.svelte';
-	import AboutPage from './AboutPage.svelte';
-  </script>
-  
-  <Router>
-	<Route path="/" component={HomePage} />
-	<Route path="/about" component={AboutPage} />
-  </Router>
