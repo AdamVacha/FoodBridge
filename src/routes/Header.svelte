@@ -12,8 +12,8 @@
 			<ul>
 				<li><a href="/">HOME</a></li>
 				<li><a href="/about">ABOUT US</a></li>
-				<li><a href="">DONATE/REGISTER</a></li>
-				<li><a href="">LOGIN</a></li>
+				<li><a href="/register">REGISTER</a></li>
+				<li><a href="/login">LOGIN</a></li>
 				<li><a href="">SHELTER FINDER</a></li>
 			</ul>
 		</div>
