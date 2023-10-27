@@ -1,53 +1,39 @@
 <!-- Header.svelte -->
-
-<!DOCTYPE html>
-<html lang="en">
-	<nav class="header">
-		<a href="/" class="logo-container">
-			<img src="images/logo.png" alt="FoodBridge Logo" class="logo" />
-		</a>
-		<div class="nav-links" id="navLinks">
-			<ion-icon class="menu" name="close-outline" on:click={hideMenu} />
-
-			<ul>
-				<li><a href="/">HOME</a></li>
-				<li><a href="/about">ABOUT US</a></li>
-				<li><a href="/register">REGISTER</a></li>
-				<li><a href="/login">LOGIN</a></li>
-				<li><a href="">SHELTER FINDER</a></li>
-			</ul>
-		</div>
-		<ion-icon class="menu" name="menu-outline" on:click={showMenu} />
-	</nav>
-
-	<script
-		type="module"
-		src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-	></script>
-	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-	<script	>
-		function showMenu() {
-			const navLinks = document.getElementById('navLinks');
-			if (navLinks) {
-				navLinks.style.right = '0';
-			}
+<script>
+	function showMenu() {
+		const navLinks = document.getElementById('navLinks');
+		if (navLinks) {
+			navLinks.style.right = '0';
 		}
+	}
 
-		function hideMenu() {
-			const navLinks = document.getElementById('navLinks');
-			if (navLinks) {
-				navLinks.style.right = '-200px';
-			}
+	function hideMenu() {
+		const navLinks = document.getElementById('navLinks');
+		if (navLinks) {
+			navLinks.style.right = '-200px';
 		}
-	</script>
-</html>
+	}
+</script>
+
+<nav class="header">
+	<a href="/" class="logo-container">
+		<img src="images/logo.png" alt="FoodBridge Logo" class="logo" />
+	</a>
+	<div class="nav-links" id="navLinks">
+		<ion-icon class="menu" name="close-outline" on:click={hideMenu} />
+
+		<ul>
+			<li><a href="/">HOME</a></li>
+			<li><a href="/about">ABOUT US</a></li>
+			<li><a href="/register">REGISTER</a></li>
+			<li><a href="/login">LOGIN</a></li>
+			<li><a href="">SHELTER FINDER</a></li>
+		</ul>
+	</div>
+	<ion-icon class="menu" name="menu-outline" on:click={showMenu} />
+</nav>
 
 <style>
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: 'Montserrat', sans-serif;
-	}
 	.header {
 		width: 90%;
 	}
