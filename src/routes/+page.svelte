@@ -13,7 +13,7 @@
 					We are a community-driven platform dedicated to helping bridge the gap<br /> between food donors
 					and shelters.
 				</p>
-				<a href="" class="get-started">Get Started</a>
+				<a href="get starte button" class="get-started">Get Started</a>
 			</div>
 		</section>
 		<!-------Statistics------->
