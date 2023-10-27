@@ -5,7 +5,7 @@
 		<!-- Logo Column -->
 		<div class="footer-col">
 			<a href="/" class="logo-container">
-				<img src="images/logo.png" alt="FoodBridge Logo" class="logo" />
+				<img src="/images/logo.png" alt="FoodBridge Logo" class="logo" />
 			</a>
 		</div>
 
@@ -30,6 +30,7 @@
 			</div>
 		</div>
 	</div>
+
 </footer>
 
 <style>

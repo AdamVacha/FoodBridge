@@ -17,16 +17,16 @@
 
 <nav class="header">
 	<a href="/" class="logo-container">
-		<img src="images/logo.png" alt="FoodBridge Logo" class="logo" />
+		<img src="/images/logo.png" alt="FoodBridge Logo" class="logo" />
 	</a>
 	<div class="nav-links" id="navLinks">
 		<ion-icon class="menu" name="close-outline" on:click={hideMenu} />
 
 		<ul>
 			<li><a href="/">HOME</a></li>
-			<li><a href="/about">ABOUT US</a></li>
-			<li><a href="/register">REGISTER</a></li>
-			<li><a href="/login">LOGIN</a></li>
+			<li><a href="/pages/about">ABOUT US</a></li>
+			<li><a href="/pages/register">REGISTER</a></li>
+			<li><a href="/pages/login">LOGIN</a></li>
 			<li><a href="">SHELTER FINDER</a></li>
 		</ul>
 	</div>
@@ -36,7 +36,6 @@
 <style>
 	.header {
 		width: 90%;
-		background: rgba(189, 110, 19, 0.705);
 	}
 	.menu {
 		display: none;
