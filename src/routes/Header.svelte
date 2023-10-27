@@ -14,7 +14,7 @@
 				<li><a href="/about">ABOUT US</a></li>
 				<li><a href="">DONATE/REGISTER</a></li>
 				<li><a href="">LOGIN</a></li>
-				<li><a href="">SHELTER FINDER</a></li>
+				<li><a href="/shelter finder">SHELTER FINDER</a></li>
 			</ul>
 		</div>
 		<ion-icon class="menu" name="menu-outline" on:click={showMenu} />
