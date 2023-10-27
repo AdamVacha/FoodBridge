@@ -1,71 +1,83 @@
 <script>
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
-<section class="main">
-	<div class="welcome-box">
-		<h1>Welcome to FoodBridge</h1>
-		<p>Where Nutrition Meets Compassion</p>
-		<p>
-			We are a community-driven platform dedicated to helping bridge the gap<br /> between food donors
-			and shelters.
-		</p>
-		<a href="" class="get-started">Get Started</a>
-	</div>
-</section>
-<!-------Statistics------->
 
-<section class="statistics">
-	<h2>Our Statistics</h2>
-	<div class="stat">
-		<h3>5000+</h3>
-		<p>Donors</p>
-	</div>
-	<div class="stat">
-		<h3>10,000+</h3>
-		<p>Meals Provided</p>
-	</div>
-	<div class="stat">
-		<h3>150+</h3>
-		<p>Shelters Helped</p>
-	</div>
-</section>
+		<section class="main">
+			<Header />
+			<div class="welcome-box">
+				<h1>Welcome to FoodBridge</h1>
+				<p>Where Nutrition Meets Compassion</p>
+				<p>
+					We are a community-driven platform dedicated to helping bridge the gap<br /> between food donors
+					and shelters.
+				</p>
+				<a href="" class="get-started">Get Started</a>
+			</div>
+		</section>
+		<!-------Statistics------->
 
-<!-- /* ----- Testimonials ----- */ -->
-<section class="testimonials">
-	<h2>What People Say</h2>
-	<div class="row">
-		<div class="testimonial-col">
-			<img src="images/user1.jpeg" />
-			<div>
-				<p>"This platform has made it so easy to donate food. I'm glad I can help!"</p>
-				<h3>- John Doe</h3>
-				<div class="star-rating">
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
+		<section class="statistics">
+			<h2>Our Statistics</h2>
+			<div class="stat">
+				<h3>5000+</h3>
+				<p>Donors</p>
+			</div>
+			<div class="stat">
+				<h3>10,000+</h3>
+				<p>Meals Provided</p>
+			</div>
+			<div class="stat">
+				<h3>150+</h3>
+				<p>Shelters Helped</p>
+			</div>
+		</section>
+
+		<!-- /* ----- Testimonials ----- */ -->
+		<section class="testimonials">
+			<h2>What People Say</h2>
+			<div class="row">
+				<div class="testimonial-col">
+					<img src="images/user1.jpeg" />
+					<div>
+						<p>"This platform has made it so easy to donate food. I'm glad I can help!"</p>
+						<h3>- John Doe</h3>
+						<div class="star-rating">
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+						</div>
+					</div>
+				</div>
+				<div class="testimonial-col">
+					<img src="images/user2.jpeg" />
+					<div>
+						<p>"Amazing initiative. It's great to see communities come together for a cause."</p>
+						<h3>- Jane Smith</h3>
+						<div class="star-rating">
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star" />
+							<ion-icon name="star-half-outline" />
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="testimonial-col">
-			<img src="images/user2.jpeg" />
-			<div>
-				<p>"Amazing initiative. It's great to see communities come together for a cause."</p>
-				<h3>- Jane Smith</h3>
-				<div class="star-rating">
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star-half-outline" />
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+		</section>
+		<Footer />
+
+
 
 <style>
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: 'Montserrat', sans-serif;
+	}
 	.main {
 		min-height: 100vh;
 		width: 100%;
@@ -206,7 +218,7 @@
 		justify-content: flex-start;
 		margin-top: 10px;
 	}
-
+	
 	@media (max-width: 700px) {
 		.welcome-box h1 {
 			font-size: 24px;
