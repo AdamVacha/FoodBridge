@@ -36,6 +36,7 @@
 <style>
 	.header {
 		width: 90%;
+		background: rgba(189, 110, 19, 0.705);
 	}
 	.menu {
 		display: none;

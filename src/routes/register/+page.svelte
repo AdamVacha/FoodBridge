@@ -13,9 +13,7 @@
 					<label for="donation_center">Donation Center</label>
 				</div>
 			</div>
-			<!--onClick state for checkboxes-->
-			<!--onClick state for checkboxes-->
-			<!--onClick state for checkboxes-->
+
 			<script>
 				function uncheck(id) {
 					document.getElementById(id).checked = false;
