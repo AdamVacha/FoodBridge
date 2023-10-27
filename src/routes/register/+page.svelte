@@ -22,6 +22,22 @@
 				<h1>Register</h1>
                 <!-- Registration Section -->
                 <form action="/register" method="post">
+                    <div class="input-wrapper role-selection">
+                        <span class="role-label">I am registering as:</span>
+                        <div class="role-options">
+                            <input type="checkbox" id="donor" name="role" value="donor" onclick="uncheck('donation_center')">
+                            <label for="donor">Donor</label>
+                            
+                            <input type="checkbox" id="donation_center" name="role" value="donation_center" onclick="uncheck('donor')">
+                            <label for="donation_center">Donation Center</label>
+                        </div>
+                    </div>
+                    <!--onClick state for checkboxes-->
+                    <script>
+                        function uncheck(id) {
+                            document.getElementById(id).checked = false;
+                        }
+                    </script>
                     <div class="input-wrapper">
                         <label for="username">Username:</label>
                         <input type="text" id="username" name="username" required>
@@ -110,6 +126,74 @@
     input:focus {
         border-color: rgb(255, 177, 99);
     }
+
+    .role-selection {
+        margin-bottom: 20px;
+    }
+
+    .role-label {
+        display: block;
+        margin-bottom: 15px;
+        font-weight: 600;
+        color: rgb(255, 177, 99);
+    }
+
+    .role-options {
+        display: flex; 
+        align-items: center;
+    }
+
+    .role-options label {
+        margin-right: 30px;
+        font-weight: normal;
+        position: relative;
+        padding-left: 25px; 
+        cursor: pointer;
+    }
+
+    /* hide default checkboxes */
+    .role-options input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    /* Create custom checkboxes using pseudo-elements */
+    .role-options label:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 177, 99, 0.6);
+        border-radius: 3px;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Styling when checkbox is checked */
+    .role-options input[type="checkbox"]:checked + label:before {
+        background-color: rgba(255, 177, 99, 0.6);
+    }
+
+    .role-options label:after {
+        content: '\2713'; 
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%) scale(0);
+        color: white;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .role-options input[type="checkbox"]:checked + label:after {
+        transform: translateY(-50%) scale(1);
+    }
+
 
     .submit-btn {
     margin-top: 20px;
