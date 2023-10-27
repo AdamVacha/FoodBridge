@@ -1,4 +1,9 @@
-<!-- Header.svelte -->
+
+function showMenu() {
+			const navLinks = document.getElementById('navLinks');
+			if (navLinks) {
+				navLinks.style.right = '0';
+			}
 <script>
 	function showMenu() {
 		const navLinks = document.getElementById('navLinks');
