@@ -5,13 +5,12 @@
 
 <!-- todo: extend background image into header-->
 <div class="page-wrapper">
-    <Header />
-    <main>
-        <slot />
-    </main>
-    <Footer />
+	<Header />
+	<main>
+		<slot />
+	</main>
+	<Footer />
 </div>
-
 
 <style>
 	.page-wrapper {

@@ -44,7 +44,6 @@
 </section>
 
 <style>
-
 	.register {
 		padding-left: 6.5%;
 		padding-right: 45%;

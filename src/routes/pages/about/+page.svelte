@@ -61,7 +61,6 @@
 </section>
 
 <style>
-	
 	.about-us {
 		padding-left: 6.5%;
 		padding-right: 45%;
