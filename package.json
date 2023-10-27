@@ -31,6 +31,7 @@
 	"type": "module",
 	"dependencies": {
 		"@auth/core": "^0.16.1",
-		"@auth/sveltekit": "^0.3.11"
+		"@auth/sveltekit": "^0.3.11",
+		"ionicons": "^7.2.1"
 	}
 }

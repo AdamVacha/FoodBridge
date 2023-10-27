@@ -46,5 +46,8 @@ Dependencies for Devs'
 ```bash
 npm install @auth/core @auth/sveltekit
 ```
-
+- Icons
+```bash
+npm install ionicons
+```
 
