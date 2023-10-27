@@ -1,22 +1,9 @@
 <script>
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
-
 </script>
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>FoodBridge</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
+
 		<section class="main">
 			<Header />
 			<div class="welcome-box">
@@ -82,8 +69,8 @@
 			</div>
 		</section>
 		<Footer />
-	</body>
-</html>
+
+
 
 <style>
 	* {
