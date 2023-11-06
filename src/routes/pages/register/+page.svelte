@@ -3,13 +3,13 @@
 		<h1>Register</h1>
 		<!-- Registration Section -->
 		<form action="/register" method="post">
-			<div class="input-wrapper role-selection">
+			<div class="input-wrapper">
 				<span class="role-label">I am registering as:</span>
 				<div class="role-options">
-					<input type="checkbox" id="donor" name="role" value="donor" />
+					<input type="radio" id="donor" name="role" value="donor" />
 					<label for="donor">Donor</label>
 
-					<input type="checkbox" id="donation_center" name="role" value="donation_center" />
+					<input type="radio" id="donation_center" name="role" value="donation_center" />
 					<label for="donation_center">Donation Center</label>
 				</div>
 			</div>
@@ -64,12 +64,13 @@
 	}
 
 	.input-wrapper {
-		margin-bottom: 15px;
+		margin-bottom: 25px;
 	}
 
 	label {
 		display: block;
-		margin-bottom: 8px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		font-weight: 600;
 	}
 
@@ -83,61 +84,42 @@
 		color: white;
 		outline: none;
 	}
+	input[type='radio'] {
+		width: auto;
+		margin-right: 10px;
+		appearance: none;
+		padding: 5px;
+		border: 2px solid rgb(255, 177, 99);
+		background-color: rgba(255, 255, 255, 0.2);
+		border-radius: 50%;
+	}
+	input[type='radio']:checked {
+		background-color: rgb(240, 111, 42);
+	}
 
 	input:focus {
 		border-color: rgb(255, 177, 99);
 	}
 
-	.role-selection {
-		margin-bottom: 20px;
-	}
-
 	.role-label {
-		display: block;
 		margin-bottom: 15px;
 		font-weight: 600;
 		color: rgb(255, 177, 99);
+		display: block;
 	}
 
 	.role-options {
 		display: flex;
 		align-items: center;
+		justify-content: flex-start;
 	}
 
 	.role-options label {
-		margin-right: 30px;
+		margin-right: 40px;
+		padding-left: 0;
 		font-weight: normal;
-		position: relative;
-		padding-left: 25px;
+
 		cursor: pointer;
-	}
-
-	/* hide default checkboxes */
-	.role-options input[type='checkbox'] {
-		position: absolute;
-		opacity: 0;
-		height: 0;
-		width: 0;
-	}
-
-	/* Create custom checkboxes using pseudo-elements */
-	.role-options label:before {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 18px;
-		height: 18px;
-		border: 2px solid rgba(255, 177, 99, 0.6);
-		border-radius: 3px;
-		background-color: transparent;
-		transition: background-color 0.3s ease;
-	}
-
-	/* Styling when checkbox is checked */
-	.role-options input[type='checkbox']:checked + label:before {
-		background-color: rgba(255, 177, 99, 0.6);
 	}
 
 	.role-options label:after {
@@ -151,9 +133,6 @@
 		transition: transform 0.3s ease;
 	}
 
-	.role-options input[type='checkbox']:checked + label:after {
-		transform: translateY(-50%) scale(1);
-	}
 	.submit-btn {
 		margin-top: 20px;
 		margin-bottom: 30px;
