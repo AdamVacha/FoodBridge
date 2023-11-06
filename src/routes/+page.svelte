@@ -12,7 +12,7 @@
 			We are a community-driven platform dedicated to helping bridge the gap<br /> between food donors
 			and shelters.
 		</p>
-		<a href="" class="get-started">Get Started</a>
+		<a href="/pages/register" class="get-started">Get Started</a>
 	</div>
 </section>
 <!-------Statistics------->
@@ -81,7 +81,7 @@
 		background-position: 45% center;
 		background-size: cover;
 		position: relative;
-		background-image: url('images/homepage.jpeg');
+		background-image: url('/images/homepage.jpeg');
 	}
 
 	/* Create a pseudo-element for the overlay */
