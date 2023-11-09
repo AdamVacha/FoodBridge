@@ -6,6 +6,9 @@
 <section class="main">
 	<section class="login">
 		<!-- Authentication Section -->
+
+		<h1>Login</h1>
+
 		<div class="auth-section">
 			{#if $page.data.session}
 				{#if $page.data.session.user?.image}
@@ -40,10 +43,14 @@
 	}
 
 	h1 {
+		text-align: center;
 		font-size: 42px;
 		color: rgb(255, 177, 99);
 		margin-bottom: 20px;
 		margin-top: 20px;
+	}
+	div {
+		text-align: center;
 	}
 	h2 {
 		font-size: 20px;
