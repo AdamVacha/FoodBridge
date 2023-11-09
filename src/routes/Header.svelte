@@ -25,7 +25,6 @@
 		<ul>
 			<li><a href="/">HOME</a></li>
 			<li><a href="/pages/about">ABOUT US</a></li>
-			<li><a href="/pages/register">REGISTER</a></li>
 			<li><a href="/pages/login">LOGIN</a></li>
 			<li><a href="/pages/shelter finder">SHELTER FINDER</a></li>
 		</ul>
