@@ -1,7 +1,28 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
+	import { Star } from 'lucide-svelte';
+	import { StarHalf } from 'lucide-svelte';
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('fadeInBottom');
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		); // This is the percentage of visibility at which the callback will be executed
+
+		const elements = document.querySelectorAll('.testimonial-col');
+		elements.forEach((el) => observer.observe(el));
+	});
 </script>
+
+<!-- The rest of your component -->
 
 <section class="main">
 	<Header />
@@ -12,56 +33,59 @@
 			We are a community-driven platform dedicated to helping bridge the gap<br /> between food donors
 			and shelters.
 		</p>
-		<a href="/pages/register" class="get-started">Get Started</a>
+		<a href="/pages/login" class="get-started">Get Started</a>
 	</div>
 </section>
 <!-------Statistics------->
 
 <section class="statistics">
 	<h2>Our Statistics</h2>
-	<div class="stat">
+	<div class="stat fadeIn" style="animation-delay: 0s;">
 		<h3>5000+</h3>
 		<p>Donors</p>
 	</div>
-	<div class="stat">
+	<div class="stat fadeIn" style="animation-delay: 0.5s;">
 		<h3>10,000+</h3>
 		<p>Meals Provided</p>
 	</div>
-	<div class="stat">
+	<div class="stat fadeIn" style="animation-delay: 1s;">
 		<h3>150+</h3>
 		<p>Shelters Helped</p>
 	</div>
 </section>
-
 <!-- /* ----- Testimonials ----- */ -->
 <section class="testimonials">
 	<h2>What People Say</h2>
 	<div class="row">
-		<div class="testimonial-col">
-			<img src="images/user1.jpeg" />
-			<div>
-				<p>"This platform has made it so easy to donate food. I'm glad I can help!"</p>
-				<h3>- John Doe</h3>
-				<div class="star-rating">
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
+		<div class="fadeInBottom">
+			<div class="testimonial-col">
+				<img src="images/user1.jpeg" alt="User 1" />
+				<div>
+					<p>"This platform has made it so easy to donate food. I'm glad I can help!"</p>
+					<h3>- John Doe</h3>
+					<div class="star-rating">
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<StarHalf fill="#df7b4c" color="#df7b4c" />
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="testimonial-col">
-			<img src="images/user2.jpeg" />
-			<div>
-				<p>"Amazing initiative. It's great to see communities come together for a cause."</p>
-				<h3>- Jane Smith</h3>
-				<div class="star-rating">
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star" />
-					<ion-icon name="star-half-outline" />
+		<div class="fadeInBottom" style="animation-delay: 0.8s">
+			<div class="testimonial-col">
+				<img src="images/user2.jpeg" alt="User 2" />
+				<div>
+					<p>"Amazing initiative. It's great to see communities come together for a cause."</p>
+					<h3>- Jane Smith</h3>
+					<div class="star-rating">
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+						<Star fill="#df7b4c" color="#df7b4c" />
+					</div>
 				</div>
 			</div>
 		</div>
@@ -169,10 +193,12 @@
 	.row {
 		margin-top: auto;
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
+		align-items: center;
 	}
 
 	.testimonials {
+		height: 300px;
 		width: 80%;
 		margin: auto;
 		text-align: center;
@@ -183,7 +209,8 @@
 		margin-bottom: 30px;
 	}
 	.testimonial-col {
-		flex-basis: 44%;
+		margin: 0 20px;
+		flex: 1;
 		border-radius: 10px;
 		margin-bottom: 5%;
 		text-align: left;
@@ -206,16 +233,78 @@
 		margin-top: 15px;
 		text-align: left;
 	}
-	.testimonial-col ion-icon {
-		color: #df7b4c;
-		font-size: 20px;
-	}
+
 	.star-rating {
 		display: flex;
 		justify-content: flex-start;
 		margin-top: 10px;
 	}
 
+	.fadeInBottom {
+		animation: fadeInBottom 2s ease-in-out both;
+		-webkit-animation: fadeInBottom 2s both;
+		-moz-animation: fadeInBottom 2s both;
+		-o-animation: fadeInBottom 2s both;
+	}
+
+	@keyframes fadeInBottom {
+		0% {
+			opacity: 0;
+			transform: translateY(50px); /* Start 50 pixels down */
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0); /* End at the element's natural position */
+		}
+	}
+
+	@-webkit-keyframes fadeInBottom {
+		0% {
+			opacity: 0;
+			-webkit-transform: translateY(50px);
+		}
+		100% {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+		}
+	}
+
+	@-moz-keyframes fadeInBottom {
+		0% {
+			opacity: 0;
+			-moz-transform: translateY(50px);
+		}
+		100% {
+			opacity: 1;
+			-moz-transform: translateY(0);
+		}
+	}
+
+	@-o-keyframes fadeInBottom {
+		0% {
+			opacity: 0;
+			-o-transform: translateY(50px);
+		}
+		100% {
+			opacity: 1;
+			-o-transform: translateY(0);
+		}
+	}
+	.fadeIn {
+		opacity: 0;
+		animation: fadeIn 1s ease-in-out forwards;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	/* ----- Media Styling ----- */
 	@media (max-width: 700px) {
 		.welcome-box h1 {
 			font-size: 24px;
@@ -231,7 +320,7 @@
 		.stat {
 			padding-left: 0;
 			display: inline-block;
-			margin: 30px 50px; /* Increased horizontal margin */
+			margin: 30px 50px;
 			position: relative;
 		}
 
