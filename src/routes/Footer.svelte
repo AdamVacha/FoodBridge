@@ -1,5 +1,11 @@
-<!---------Footer--------->
+<script>
+	import { Facebook } from 'lucide-svelte';
+	import { Instagram } from 'lucide-svelte';
+	import { Twitter } from 'lucide-svelte';
+	import { Linkedin } from 'lucide-svelte';
+</script>
 
+<!---------Footer--------->
 <footer>
 	<div class="row">
 		<!-- Logo Column -->
@@ -23,10 +29,12 @@
 		<!-- Social Media Icons Column -->
 		<div class="footer-col">
 			<h3>Follow Us</h3>
+
 			<div class="social-icons">
-				<ion-icon name="logo-facebook" />
-				<ion-icon name="logo-twitter" />
-				<ion-icon name="logo-instagram" />
+				<Facebook />
+				<Instagram />
+				<Twitter />
+				<Linkedin />
 			</div>
 		</div>
 	</div>
@@ -61,7 +69,7 @@
 		gap: 10px; /* Spacing between icons */
 	}
 
-	.social-icons ion-icon {
+	.social-icons {
 		font-size: 24px; /* Adjust the size as needed */
 		cursor: pointer;
 	}

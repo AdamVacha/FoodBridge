@@ -1,9 +1,8 @@
 <script>
-	import Footer from '../Footer.svelte';
-	import Header from '../Header.svelte';
+	import Footer from '../../Footer.svelte';
+	import Header from '../../Header.svelte';
 </script>
 
-<!-- todo: extend background image into header-->
 <div class="page-wrapper">
 	<Header />
 	<main>
@@ -20,7 +19,7 @@
 		background-size: cover;
 		position: relative;
 		background-image: linear-gradient(rgba(170, 108, 84, 0.795), rgba(86, 73, 49, 0.702)),
-			url('/images/fancyfood.jpeg');
+			url('/images/foodbridge.webp');
 		display: flex;
 		flex-direction: column;
 	}
