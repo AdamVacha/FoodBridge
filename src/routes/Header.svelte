@@ -25,8 +25,8 @@
 		<ul>
 			<li><a href="/">HOME</a></li>
 			<li><a href="/pages/about">ABOUT US</a></li>
-			<li><a href="/pages/login">LOGIN</a></li>
 			<li><a href="/pages/shelter finder">SHELTER FINDER</a></li>
+			<li><a href="/pages/login">LOGIN</a></li>
 		</ul>
 	</div>
 	<ion-icon class="menu" name="menu-outline" on:click={showMenu} />
