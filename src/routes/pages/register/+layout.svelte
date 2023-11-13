@@ -20,7 +20,7 @@
 		background-size: cover;
 		position: relative;
 		background-image: linear-gradient(rgba(170, 108, 84, 0.795), rgba(86, 73, 49, 0.702)),
-			url('/images/');
+			url('/images/fancyfood.jpeg');
 		display: flex;
 		flex-direction: column;
 	}
