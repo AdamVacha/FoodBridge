@@ -141,19 +141,18 @@
 		display: inline-block;
 		text-decoration: none;
 		font-weight: 600;
-		color: rgb(0, 0, 0);
-		border: 1px solid rgb(255, 255, 255);
+		color: white;
+
 		padding: 12px 34px;
 		font-size: 156x;
-		background: rgba(250, 176, 92, 0.887);
+		background: #e18358;
 		position: relative;
 		cursor: pointer;
 		border-radius: 10px;
 	}
 	.get-started:hover {
-		border: 1px solid #fec528;
-		background: #fec528;
-		color: #000000;
+		background: rgba(250, 176, 92, 0.881);
+		color: #ffffff;
 		transition: 1s;
 	}
 
@@ -218,6 +217,7 @@
 		padding: 25px;
 		cursor: pointer;
 		display: flex;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 	}
 	.testimonial-col img {
 		height: 70px;

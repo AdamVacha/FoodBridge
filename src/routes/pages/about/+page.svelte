@@ -66,7 +66,7 @@
 		padding-right: 45%;
 		color: white;
 		text-align: left;
-		padding-bottom: 40px;
+		padding-bottom: 80px;
 	}
 	.about-us h1,
 	p {
