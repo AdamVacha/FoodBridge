@@ -1,6 +1,14 @@
 <script>
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
+
+	async function handleSignIn() {
+		await signIn('github');
+		// Call the endpoint to check user and redirect
+		const response = await fetch('/api/post-login');
+		const { redirectTo } = await response.json();
+		window.location.href = redirectTo; // Redirect based on server response
+	}
 </script>
 
 <section class="main">
@@ -34,14 +42,12 @@
 		padding: 0;
 		font-family: 'Montserrat', sans-serif;
 	}
-
 	.login {
 		padding-left: 6.5%;
 		padding-right: 45%;
 		color: white;
 		text-align: left;
 	}
-
 	h1 {
 		text-align: center;
 		font-size: 42px;
@@ -51,24 +57,5 @@
 	}
 	div {
 		text-align: center;
-	}
-	h2 {
-		font-size: 20px;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-	p {
-		font-size: 16px;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-	ul {
-		font-size: 16px;
-		margin-bottom: 20px;
-		margin-top: 20px;
-	}
-	ul li {
-		margin-bottom: 10px;
-		margin-top: 10px;
 	}
 </style>

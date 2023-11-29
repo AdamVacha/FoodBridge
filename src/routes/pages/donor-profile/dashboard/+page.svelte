@@ -1,4 +1,6 @@
 <script>
+	// @ts-nocheck
+
 	import { LineChart, CalendarDays } from 'lucide-svelte';
 
 	// A sample array of donations. Fetch this data from backend.

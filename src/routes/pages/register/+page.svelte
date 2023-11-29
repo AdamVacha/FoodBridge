@@ -1,8 +1,13 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	export let data: PageData;
+</script>
+
 <section class="main">
 	<section class="register">
 		<h1>Register</h1>
 		<!-- Registration Section -->
-		<form action="/register" method="post">
+		<form action="create" method="post" autocomplete="on">
 			<div class="input-wrapper">
 				<span class="role-label">I am registering as:</span>
 				<div class="role-options">
@@ -13,28 +18,21 @@
 					<label for="donation_center">Donation Center</label>
 				</div>
 			</div>
-
-			<script>
-				function uncheck(id) {
-					document.getElementById(id).checked = false;
-				}
-			</script>
 			<div class="input-wrapper">
 				<label for="username">Username:</label>
-				<input type="text" id="username" name="username" required />
+				<input
+					type="text"
+					id="username"
+					name="username"
+					required
+					value={data.session?.user?.name}
+				/>
 			</div>
 			<div class="input-wrapper">
 				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" required />
+				<input type="email" id="email" name="email" required value={data.session?.user?.email} />
 			</div>
-			<div class="input-wrapper">
-				<label for="password">Password:</label>
-				<input type="password" id="password" name="password" required />
-			</div>
-			<div class="input-wrapper">
-				<label for="confirm-password">Confirm Password:</label>
-				<input type="password" id="confirm-password" name="confirm-password" required />
-			</div>
+
 			<div class="submit-btn">
 				<button type="submit">Register</button>
 			</div>
@@ -50,10 +48,6 @@
 		padding-bottom: 50px;
 		color: white;
 		text-align: left;
-	}
-	.register h1,
-	p {
-		margin-right: 20px;
 	}
 
 	h1 {
@@ -159,9 +153,5 @@
 		padding-right: 45%;
 		color: white;
 		text-align: left;
-	}
-	.register h1,
-	p {
-		margin-right: 20px;
 	}
 </style>
