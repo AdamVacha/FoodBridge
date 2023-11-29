@@ -1,14 +1,6 @@
 <script>
 	import { signIn, signOut } from '@auth/sveltekit/client';
 	import { page } from '$app/stores';
-
-	async function handleSignIn() {
-		await signIn('github');
-		// Call the endpoint to check user and redirect
-		const response = await fetch('/api/post-login');
-		const { redirectTo } = await response.json();
-		window.location.href = redirectTo; // Redirect based on server response
-	}
 </script>
 
 <section class="main">

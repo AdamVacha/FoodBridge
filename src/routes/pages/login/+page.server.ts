@@ -20,7 +20,7 @@ export const load = (async ({ locals }) => {
 
 	if (userRow) {
 		// Redirect to profile if user exists
-		throw redirect(302, '/pages/donor-profile');
+		throw redirect(302, '/pages/donor-profile/dashboard');
 	} else {
 		// Redirect to registration page if user does not exist
 		throw redirect(302, '/pages/register');
