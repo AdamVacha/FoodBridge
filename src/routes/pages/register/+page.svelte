@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
@@ -7,7 +8,7 @@
 	<section class="register">
 		<h1>Register</h1>
 		<!-- Registration Section -->
-		<form action="create" method="post" autocomplete="on">
+		<form use:enhance action="/pages/register/?/create" method="post" autocomplete="on">
 			<div class="input-wrapper">
 				<span class="role-label">I am registering as:</span>
 				<div class="role-options">
