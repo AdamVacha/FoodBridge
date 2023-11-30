@@ -38,6 +38,7 @@
 		"@prisma/client": "^5.6.0",
 		"lucide": "^0.292.0",
 		"lucide-svelte": "^0.292.0",
-		"mongodb": "^6.2.0"
+		"mongodb": "^6.2.0",
+		"turso": "^0.1.0"
 	}
 }
