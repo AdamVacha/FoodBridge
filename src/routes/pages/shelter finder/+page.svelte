@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import { operationStore, query, setClient } from '@urql/svelte';
 	import { writable } from 'svelte/store';
 	import client from 'C:/FoodBridge/FoodBridgeMain-main/src/client.js'
