@@ -22,8 +22,6 @@
 	});
 </script>
 
-<!-- The rest of your component -->
-
 <section class="main">
 	<Header />
 	<div class="welcome-box">
@@ -254,7 +252,7 @@
 		}
 		100% {
 			opacity: 1;
-			transform: translateY(0); /* End at the element's natural position */
+			transform: translateY(0); 
 		}
 	}
 

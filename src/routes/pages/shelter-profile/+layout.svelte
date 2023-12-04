@@ -1,7 +1,6 @@
-<script lang="ts">
+<script>
 	import Footer from '../../Footer.svelte';
 	import Header from '../../Header.svelte';
-
 	import {
 		Home,
 		Clock,
@@ -28,12 +27,11 @@
 	<Header />
 
 	<main>
-		<div class="donor-header">
-			<img src="/images/user2.jpeg" alt="Profile Photo" class="profile-pic" />
-			<div class="donor-info">
-				<h2>Jane Smith</h2>
-				<p><Clock color="grey" fill="white" size="15px" /> Last donated 37 mins ago</p>
-				<p><Heart color="grey" fill="white" size="15px" /> Donor for 7 months</p>
+		<div class="shelter-header">
+			<img src="/images/shelterlogo.png" alt="Profile Photo" class="profile-pic" />
+			<div class="shelter-info">
+				<h2>SpringField Community Shelter</h2>
+				<p><Clock color="grey" fill="white" size="15px" /> Last donation 37 mins ago</p>
 			</div>
 		</div>
 		<div class="profile-page">
@@ -41,13 +39,13 @@
 				<nav class="donor-nav">
 					<ul>
 						<li>
-							<a href="/pages/donor-profile/dashboard">
+							<a href="/pages/shelter-profile/dashboard">
 								<Home color="grey" fill="white" size="15px" /> Dashboard</a
 							>
 						</li>
 						<li>
-							<a href="/pages/donor-profile/donation-form"
-								><HeartHandshake color="grey" fill="white" size="15px" /> Make Donation</a
+							<a href="/pages/shelter-profile/manage-donations"
+								><HeartHandshake color="grey" fill="white" size="15px" /> Manage Donations</a
 							>
 						</li>
 						<li>
@@ -94,7 +92,7 @@
 		overflow: hidden;
 	}
 
-	.donor-header {
+	.shelter-header {
 		display: flex;
 		background-color: #fff;
 		align-items: center;
@@ -124,12 +122,12 @@
 		margin-right: 60px;
 	}
 
-	.donor-info h2 {
+	.shelter-info h2 {
 		font-size: 1.5em;
 		color: #333;
 		margin-bottom: 5px;
 	}
-	.donor-info {
+	.shelter-info {
 		color: #666;
 		font-size: 0.9em;
 		margin-bottom: 20px;

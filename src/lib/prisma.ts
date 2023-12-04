@@ -15,7 +15,7 @@ const libsql = createClient({
 });
 
 // Create a Prisma "adapter" for libSQL
-
+console.log(process.env.DATABASE_URL);
 const adapter = new PrismaLibSQL(libsql);
 
 // Pass the adapter option to the Prisma Client instance

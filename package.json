@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0-next.90",
-		"@sveltejs/kit": "^1.27.1",
+		"@sveltejs/kit": "^1.27.6",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"eslint": "^8.28.0",
@@ -38,6 +38,7 @@
 		"@prisma/client": "^5.6.0",
 		"lucide": "^0.292.0",
 		"lucide-svelte": "^0.292.0",
-		"mongodb": "^6.2.0"
+		"mongodb": "^6.2.0",
+		"turso": "^0.1.0"
 	}
 }
