@@ -7,7 +7,7 @@ export const load = (async ({ locals }) => {
 	const session = await locals.getSession();
 	const user = session?.user;
 
-	if (!user || !user?.email) {
+	if (!user?.email) {
 		// Handle the case where there is no user in the session
 		return {};
 	}

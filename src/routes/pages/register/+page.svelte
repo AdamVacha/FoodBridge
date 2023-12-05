@@ -148,11 +148,4 @@
 	button:hover {
 		background-color: rgba(255, 177, 99, 0.8);
 	}
-
-	.register {
-		padding-left: 6.5%;
-		padding-right: 45%;
-		color: white;
-		text-align: left;
-	}
 </style>
