@@ -140,9 +140,7 @@
 		text-decoration: none;
 		font-weight: 600;
 		color: white;
-
 		padding: 12px 34px;
-		font-size: 156x;
 		background: #e18358;
 		position: relative;
 		cursor: pointer;
@@ -252,7 +250,7 @@
 		}
 		100% {
 			opacity: 1;
-			transform: translateY(0); 
+			transform: translateY(0);
 		}
 	}
 

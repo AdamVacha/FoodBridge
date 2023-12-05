@@ -43,7 +43,7 @@
 <style>
 	footer {
 		padding: 20px 6%;
-		background-color: #333; /* Optional: Add a background color for better visibility */
+		background-color: #333;
 		color: #fff;
 	}
 
@@ -54,7 +54,7 @@
 	}
 
 	.footer-col {
-		flex: 1; /* Equal width for all columns */
+		flex: 1;
 		text-align: center;
 	}
 	.footer-col p {
@@ -66,11 +66,8 @@
 		margin-top: 10px;
 		display: flex;
 		justify-content: center;
-		gap: 10px; /* Spacing between icons */
-	}
-
-	.social-icons {
-		font-size: 24px; /* Adjust the size as needed */
+		gap: 10px;
+		font-size: 24px;
 		cursor: pointer;
 	}
 

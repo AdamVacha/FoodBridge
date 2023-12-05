@@ -1,9 +1,9 @@
 <script>
-// @ts-nocheck
+	// @ts-nocheck
 
 	import { operationStore, query, setClient } from '@urql/svelte';
 	import { writable } from 'svelte/store';
-	import client from 'C:/FoodBridge/FoodBridgeMain-main/src/client.js'
+	import client from 'C:/FoodBridge/FoodBridgeMain-main/src/client.js';
 	setClient(client);
 
 	const listShelters = operationStore(
@@ -23,9 +23,8 @@
 	);
 
 	query(listShelters);
-	
-	let name = "";
 
+	let name = '';
 </script>
 
 <section class="main">
@@ -35,38 +34,33 @@
 			<h2>Your journey begins here</h2>
 			<input class="text" bind:value={name} placeholder="Search our partners..." />
 		</div>
-		<h2>Results
-		</h2>
+		<h2>Results</h2>
 
 		{#if $listShelters.fetching}
-		<p>Loading...</p>
+			<p>Loading...</p>
 		{:else if $listShelters.error}
-		<p>Oh no... {$listShelters.error.message}</p>
+			<p>Oh no... {$listShelters.error.message}</p>
 		{:else}
 			<ul>
-				
 				{#each $listShelters.data.listShelters.data as shelter}
-					{#if shelter.name.toUpperCase().includes(name.toUpperCase()) || name == "" 
-						|| shelter.city.toUpperCase().includes(name.toUpperCase()) 
-							|| shelter.state.toUpperCase().includes(name.toUpperCase())}
+					{#if shelter.name.toUpperCase().includes(name.toUpperCase()) || name == '' || shelter.city
+							.toUpperCase()
+							.includes(name.toUpperCase()) || shelter.state
+							.toUpperCase()
+							.includes(name.toUpperCase())}
 						<h3>
 							{shelter.name} - {shelter.city}, {shelter.state}
 							<h4>
 								{shelter.email}
 								<button>Donate here</button>
 							</h4>
-							
 						</h3>
-						
-						
 					{/if}
 				{/each}
 			</ul>
 		{/if}
 	</section>
 </section>
-
-
 
 <style>
 	* {
