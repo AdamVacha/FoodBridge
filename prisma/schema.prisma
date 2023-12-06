@@ -23,6 +23,24 @@ model User {
   id      Int     @id @default(autoincrement())
   email   String  @unique
   name    String? 
-  Profile Profile?
- 
+  Profile Profile? 
+  DonationRequests  DonationRequest[] 
+}
+
+model DonationRequest {
+  id                Int       @id @default(autoincrement())
+  userId            Int       // foreign key to user table
+  donationTypes     DonationType[]  @relation("DonationTypeToDonationRequest")
+  estimatedWeight   Float     
+  photoUrl          String?   // photo url
+  pickupDate        DateTime 
+  pickupTimeWindow  String    
+  User              User      @relation(fields: [userId], references: [id])
+
+}
+
+model DonationType {
+  id                Int                 @id @default(autoincrement())
+  type              String              @unique
+  donationRequests  DonationRequest[]   @relation("DonationTypeToDonationRequest")
 }
